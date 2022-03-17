@@ -1,15 +1,16 @@
 <!-- Barra de suscripcion -->
 
 <div class="container-fluid bg-black">
+  
   <p class="text-center text-white p-1">
-    Suscribete y recibe un 20% de descuento
+   <a class="text-center text-white p-1" href="tienda">Suscribete y recibe un 20% de descuento</a> 
   </p>
 </div>
 
 <!-- Barra de suscripcion -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container-fluid">
-    <img src="../../../assets/img/Medico.png" alt="logo" height="50" />
+    <a href="home"> <img  src="../../../assets/img/Medico.png" alt="logo" height="50" /></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -26,14 +27,14 @@
         <ul class="navbar-nav me-5 ms-2">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="home"
-              >inicio</a
+              >Inicio</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="planes">planes</a>
+            <a class="nav-link active" href="planes">Planes</a>
           </li>
           <li class="nav-item" *ngIf="auth.isAuthenticated$ | async">
-            <a class="nav-link active" href="tienda">tieda</a>
+            <a class="nav-link active" href="tienda">Tieda</a>
           </li>
           <li
             class="nav-item"
@@ -44,7 +45,7 @@
               class="btn btn-dark btn-margin"
               (click)="loginWithRedirect()"
             >
-              Log in
+              Tienda
             </button>
           </li>
           <li
@@ -72,7 +73,7 @@
                 {{ user.name }}
               </div>
               <a routerLink="/profile" class="dropdown-item dropdown-profile">
-                <fa-icon [icon]="faUser" class="mr-3"></fa-icon> Profile
+                <fa-icon [icon]="faUser" class="mr-3"></fa-icon> Perfil
               </a>
               <button
                 (click)="logout()"
